@@ -1,0 +1,12 @@
+[
+  {"section":"intro"},
+  {"section":"require"},
+  {"section":"object"},
+  {"section":"module"},
+  {"section":"class"},
+  {"section":"string"},
+  {"section":"enumerable"},
+  {"section":"array"},
+  {"section":"hash"},
+  {"section":"date_time"}
+]
