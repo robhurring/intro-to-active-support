@@ -1,0 +1,889 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Presentation</title>
+
+  <link rel="stylesheet" href="./css/reset.css" type="text/css"/>
+  <link rel="stylesheet" href="./css/showoff.css" type="text/css"/>
+
+  <script type="text/javascript" src="./js/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="./js/jquery.cycle.all.js"></script>
+	<script type="text/javascript" src="./js/jquery-print.js"></script>
+  <script type="text/javascript" src="./js/jquery.batchImageLoad.js"></script>
+
+  <script type="text/javascript" src="./js/jquery.doubletap-0.1.js"></script>
+
+  <script type="text/javascript" src="./js/fg.menu.js"></script>
+  <script type="text/javascript" src="./js/showoff.js"></script>
+  <script type="text/javascript" src="./js/jTypeWriter.js"> </script>
+  <script type="text/javascript" src="./js/sh_main.min.js"></script>
+  <script type="text/javascript" src="./js/core.js"></script>
+  <script type="text/javascript" src="./js/showoffcore.js"></script>
+
+  <link type="text/css" href="./css/fg.menu.css" media="screen" rel="stylesheet" />
+  <link type="text/css" href="./css/theme/ui.all.css" media="screen" rel="stylesheet" />
+  <link type="text/css" href="./css/sh_style.css" rel="stylesheet" >
+
+  
+
+  
+
+  <script type="text/javascript">
+  $(function(){
+    setupPreso(false, './');
+  });
+  </script>
+</head>
+
+<body>
+
+
+<a tabindex="0" href="#search-engines" class="fg-button fg-button-icon-right ui-widget ui-state-default ui-corner-all" id="navmenu"><span class="ui-icon ui-icon-triangle-1-s"></span>slides</a>
+<div id="navigation" class="hidden"></div>
+
+<div id="help">
+  <table>
+    <tr><td class="key">space, &rarr;</td><td>next slide</td></tr>
+    <tr><td class="key">&larr;</td><td>previous slide</td></tr>
+    <tr><td class="key">d</td><td>debug mode</td></tr>
+    <tr><td class="key">## &lt;ret&gt;</td><td>go to slide #</td></tr>
+    <tr><td class="key">c</td><td>table of contents (vi)</td></tr>
+    <tr><td class="key">f</td><td>toggle footer</td></tr>
+    <tr><td class="key">r</td><td>reload slides</td></tr>
+    <tr><td class="key">z</td><td>toggle help (this)</td></tr>
+  </table>
+</div>
+
+<div class="buttonNav">
+  <input type="submit" onClick="prevStep();" value="prev"/>
+  <input type="submit" onClick="nextStep();" value="next"/>
+</div>
+
+<div id="preso">loading presentation...</div>
+<div id="footer">
+  <span id="slideInfo"></span>
+  <span id="debugInfo"></span>
+  <span id="notesInfo"></span>
+</div>
+
+<div id="slides" class="offscreen" style="display:none;">
+<div class="slide" data-transition="none"><div class="content center" ref="intro/01_intro">
+<h1>Active Support</h1>
+
+<h2>A Walkthrough</h2>
+
+<p>Rob Hurring : github.com/robhurring : @robhurring</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="intro/02_about/1">
+<h1>So What is Active Support?</h1></div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="intro/02_about/2">
+<h1>Well...</h1>
+
+<p><img src="file:///Users/hurrinre/Presentations/active-support/intro/well.png" alt=""/></p></div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="intro/02_about/3">
+<h2>Active Support is the Ruby on Rails component responsible for providing Ruby language extensions, utilities, and other transversal stuff.</h2>
+
+<h2>It offers a richer bottom-line at the language level, targeted both at the development of Rails applications, and at the development of Ruby on Rails itself.</h2></div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="intro/02_about/4">
+<h1>In other words...</h1></div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="intro/02_about/5">
+<h1>It makes ruby nicer.</h1>
+
+<h2>and your life easier.</h2></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="require/01_require/1">
+<h1>Using Active Support</h1>
+
+<h3>Theres a few ways</h3></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="require/01_require/2">
+<h1>require 'active_support'</h1>
+
+<ul>
+<li>Not much happens.</li>
+<li>Active Support is broken into smaller pieces</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="require/01_require/3">
+<h1>require 'active_support/all'</h1>
+
+<ul>
+<li>Requires everything.</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental small" ref="require/01_require/4">
+<h1>require 'active_support/core_ext'</h1>
+
+<ul>
+<li>Requires just the core extensions</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental smaller" ref="require/01_require/5">
+<h1>require 'active_support/core_ext/object'</h1>
+
+<ul>
+<li>Requires just the core extensions, to Object.</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="object/01_blank/1">
+<h1>Core Extensions</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="object/01_blank/2">
+<h1>Objects</h1>
+
+<h2>require 'active_support/core_ext'</h2>
+
+<h3>Extensions to <em>all</em> objects</h3></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental small" ref="object/01_blank/3">
+<h1>Object#blank? and Object#present?</h1>
+
+<ul>
+<li>Checks for "nil" and "false"</li>
+<li>Strings made up of only whitespace</li>
+<li>Empty arrays and hashes</li>
+<li>Anything that responds to #empty?</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code small" ref="object/01_blank/4">
+<pre class="sh_ruby"><code>def ensure_session_key!
+  raise ArgumentError, 'A key is required' if @key.blank?&#xA0;&#xA0;
+end
+
+
+
+def set_conditional_cache_control!
+&#xA0;&#xA0;return if self["Cache-Control"].present?
+&#xA0;&#xA0;#...
+end</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental small" ref="object/02_try/1">
+<h1>Object#try?</h1>
+
+<ul>
+<li>When you want to run a method on an object that <em>may</em> be nil</li>
+<li>This is easy to abuse &#xCA0;_&#xCA0;</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code small" ref="object/02_try/2">
+<pre class="sh_ruby"><code>class Person
+  attr_accessor :name
+end
+
+person = Person.new
+
+puts person.try(:name) || 'Unknown'
+# =&gt; Unknown
+
+person.name = 'Joe'
+puts person.try(:name) || 'Unknown'
+# =&gt; Joe</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental smaller" ref="object/03_to_param/1">
+<h1>Object#to_param? and Object#to_query?</h1>
+
+<ul>
+<li>Useful for creating SEO friendly routes</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code small" ref="object/03_to_param/2">
+<pre class="sh_ruby"><code>class User
+&#xA0;&#xA0;def to_param
+&#xA0;&#xA0;&#xA0;&#xA0;"#{id}-#{name.parameterize}"
+&#xA0;&#xA0;end
+end
+
+link_to @user.name, @user
+# /users/1-john-smith
+
+current_user.to_query('user') 
+# =&gt; user=1-john-smith</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="module/01_method_chain/1">
+<h1>Module Extensions</h1>
+
+<h2>require 'active_support/core_ext/module'</h2></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="module/01_method_chain/2">
+<h1>Module#alias_method_chain</h1>
+
+<ul>
+<li>Useful for overriding methods</li>
+<li>Keeps the old method available</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code small" ref="module/01_method_chain/3">
+<pre class="sh_ruby"><code>class User
+  def hello
+    "Hello!"
+  end
+end
+
+user = User.new
+puts user.hello
+# =&gt; "Hello!"
+
+class User
+  def hello_with_time
+    "#{hello_without_time} - #{Time.now.to_s(:short)}"
+  end
+  alias_method_chain :hello, :time
+end
+
+puts user.hello
+# =&gt; "Hello! - 10 Aug 00:00"</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental smaller" ref="module/02_attr_default/1">
+<h1>Module#attr_accessor_with_default</h1>
+
+<ul>
+<li>Sometimes you just need a default</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="module/02_attr_default/2">
+<pre class="sh_ruby"><code>class Url
+&#xA0;&#xA0;attr_accessor_with_default :port, 80
+end
+
+Url.new.port # =&gt; 80
+
+class User
+  attr_accessor :name, :surname
+  attr_accessor_with_default(:full_name) do
+    [name, surname].compact.join(" ")
+  end
+end
+
+u = User.new
+u.name = 'Xavier'
+u.surname = 'Noria'
+u.full_name # =&gt; "Xavier Noria"</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content bullets" ref="module/03_mattr_accessor/1">
+<h1>Module#mattr_accessor</h1>
+
+<ul>
+<li>attr_accessor for modules!</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="module/03_mattr_accessor/2">
+<pre class="sh_ruby"><code>module EZLaw
+  extend self
+
+  def config=(config)
+    @config = config
+  end
+
+  def config
+    @config || {}
+  end
+end
+
+EZLaw.config = {hello: 'World'}</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="module/03_mattr_accessor/3">
+<pre class="sh_ruby"><code># Refactors into this
+module EZLaw
+  mattr_accessor :config
+end
+
+EZLaw.config = {hello: 'World'}</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="module/04_delegate/1">
+<h1>Module#delegate</h1>
+
+<ul>
+<li>Reduces boilerplate</li>
+<li>Allows forwarding method calls to associations</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="module/04_delegate/2">
+<pre class="sh_ruby"><code>class User &lt; ActiveRecord::Base
+  has_one :profile
+  delegate :name, :address, 
+    :to =&gt; :profile
+end
+
+user = User.first
+user.build_profile({
+ name: 'John Smith', 
+ address: '123 Fake St.'
+})
+
+user.name       # =&gt; John Smith
+user.address    # =&gt; 123 Fake St.</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="module/04_delegate/3">
+<pre class="sh_ruby"><code>class User &lt; ActiveRecord::Base
+  has_one :profile
+  delegate :name, :address, 
+    :to =&gt; :profile, :prefix =&gt; true
+end
+
+user = User.first
+user.build_profile({
+ name: 'John Smith', 
+ address: '123 Fake St.'
+})
+
+user.profile_name       # =&gt; John Smith
+user.profile_address    # =&gt; 123 Fake St.</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="module/04_delegate/4">
+<pre class="sh_ruby"><code>class User &lt; ActiveRecord::Base
+  has_one :profile
+  delegate :name, :address, 
+    :to =&gt; :profile, :allow_nil =&gt; true
+end
+
+user = User.first
+# ... no profile created for user ...
+
+user.name           # =&gt; nil
+user.address        # =&gt; nil</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="class/01_cattr/1">
+<h1>Class Extensions</h1>
+
+<h2>require 'active_support/core_ext/class'</h2></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="class/01_cattr/2">
+<h1>Class#cattr_accessor</h1>
+
+<ul>
+<li>attr_accessor at the Class level</li>
+<li>Reduces boilerplate</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="class/01_cattr/3">
+<pre class="sh_ruby"><code>class EZLaw
+  def self.config=(config)
+    @@config = config
+  end
+
+  def self.config
+    @@config || {}
+  end
+end
+
+EZLaw.config = {hello: 'World'}</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="class/01_cattr/4">
+<pre class="sh_ruby"><code># Refactors into this
+class EZLaw
+  # Generates class methods to access 
+  # @@config
+  cattr_accessor :config
+end
+
+EZLaw.config = {hello: 'World'}</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="class/02_class_attribute/1">
+<h1>Class#class_attribute</h1>
+
+<ul>
+<li>attr_accessor at the Class level</li>
+<li>shared with all subclasses</li>
+<li>can be overridden by subclasses</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code small" ref="class/02_class_attribute/2">
+<pre class="sh_ruby"><code>class A
+  class_attribute :x
+end
+
+class B &lt; A
+end
+
+class C &lt; B
+end
+
+A.x = :a
+B.x # =&gt; :a
+C.x # =&gt; :a
+
+B.x = :b
+A.x # =&gt; :a
+C.x # =&gt; :b&#xA0;
+
+C.x = :c
+A.x # =&gt; :a
+B.x # =&gt; :b</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="string/01_safe/1">
+<h1>String Extensions</h1>
+
+<h2>require 'active_support/core_ext/string'</h2></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="string/01_safe/2">
+<h1>String#html_safe?</h1>
+
+<ul>
+<li>Useful in views where data comes from the user</li>
+<li>Protects from XSS</li>
+<li>Strings are unsafe by default in Rails 3+</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="string/01_safe/3">
+<pre class="sh_ruby"><code>"".html_safe? 
+# =&gt; false
+
+
+s = "".html_safe
+s.html_safe?
+# =&gt; true
+
+
+# appending an unsafe string 
+# will taint the safe string
+"".html_safe + "&lt;"           # =&gt; "&amp;lt;"
+"".html_safe + "&lt;".html_safe # =&gt; "&lt;"
+
+
+&lt;%= raw @cms.current_template %&gt;
+&lt;%== @cms.current_template %&gt;
+# inserts @cms.current_template as is</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="string/02_truncate/1">
+<h1>String#truncate</h1>
+
+<h2>Less is more.</h2></div>
+</div><div class="slide" data-transition="none"><div class="content code small" ref="string/02_truncate/2">
+<pre class="sh_ruby"><code>"Oh dear! Oh dear! I shall be late!".truncate(18)
+# =&gt; "Oh dear! Oh dea..."
+
+
+"Oh dear! Oh dear! I shall be late!".truncate(18, 
+    :omission =&gt; '&amp;hellip;')
+# =&gt; "Oh dear! O&amp;hellip;"        
+
+
+"Oh dear! Oh dear! I shall be late!".truncate(18, 
+    :separator =&gt; ' ')
+# =&gt; "Oh dear! Oh..."</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="string/03_inquiry/1">
+<h1>String#inquiry</h1>
+
+<h2>Turn string content into methods</h2></div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="string/03_inquiry/2">
+<pre class="sh_ruby"><code>"dev".inquiry.dev? 
+# =&gt; true
+
+
+s = ActiveSupport::StringInquirer.new("dev")
+s.dev?
+# =&gt; true
+
+
+Rails.env.development?
+# =&gt; true</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content bullets small incremental" ref="string/04_interpolate/1">
+<h1>String#%</h1>
+
+<h2>sprintf with named places</h2></div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="string/04_interpolate/2">
+<pre class="sh_ruby"><code>"I say %{foo}" % {:foo =&gt; "wadus"}&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 
+# =&gt; "I say wadus"
+
+
+"Total is %&lt;total&gt;.02f" % {:total =&gt; 43.1}&#xA0; 
+# =&gt; Total is 43.10</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content bullets" ref="string/05_inflections/1">
+<h1>Inflections</h1>
+
+<h2>Easily format strings in views</h2></div>
+</div><div class="slide" data-transition="none"><div class="content code small" ref="string/05_inflections/2">
+<pre class="sh_ruby"><code>"table".pluralize&#xA0;&#xA0;&#xA0;&#xA0; 
+# =&gt; "tables"
+
+"tables".singularize&#xA0;
+# =&gt; "table"
+
+"admin_user".camelize 
+# =&gt; "AdminUser"
+
+"visual_effect".camelize(:lower) 
+# =&gt; "visualEffect"
+
+"AdminUser".underscore 
+# =&gt; "admin_user"
+
+"alice in wonderland".titleize 
+# =&gt; "Alice In Wonderland"
+
+"contact_data".dasherize 
+# =&gt; "contact-data"
+
+"comments_count".humanize 
+# =&gt; "Comments count"</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="string/05_inflections/3">
+<pre class="sh_ruby"><code>"Admin::UsersController".demodulize&#xA0;
+# =&gt; "UsersController"
+
+
+"admin/users_controller".camelize 
+# =&gt; "Admin::UsersController"
+
+
+"admin/users_controller".classify
+# =&gt; "Admin::UsersController"
+# NOTE: this is just a string    
+
+
+"admin/user".constantize
+# =&gt; Admin::User
+# NOTE: this is the actual class!
+#   "user".constantize.new</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="string/06_conversions/1">
+<h1>String#to_date(time)</h1>
+
+<h2>Convert strings to Date/Time objects</h2></div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="string/06_conversions/2">
+<pre class="sh_ruby"><code>"2010-07-27".to_date&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 
+# =&gt; Tue, 27 Jul 2010
+
+
+"2010-07-27 23:37:00".to_time&#xA0;&#xA0;&#xA0;&#xA0; 
+# =&gt; Tue Jul 27 23:37:00 UTC 2010
+
+
+"2010-07-27 23:37:00".to_datetime 
+# =&gt; Tue, 27 Jul 2010 23:37:00 +0000</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="enumerable/01_group/1">
+<h1>Enumerable Extensions</h1>
+
+<h2>require 'active_support/core_ext/enumerable'</h2></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="enumerable/01_group/2">
+<h1>Enumerable#group_by</h1></div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="enumerable/01_group/3">
+<pre class="sh_ruby"><code>users = User.all
+users_by_last_name = users.group_by do |user|
+    user.last_name
+end
+# =&gt; {'Smith' =&gt; [#&lt;User&gt;, #&lt;User&gt;, ...]}
+
+
+
+(1..5).group_by{ |n| n &amp; 1 }
+# =&gt; {1=&gt;[1, 3, 5], 0=&gt;[2, 4]}</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="enumerable/02_sum/1">
+<h1>Enumerable#sum</h1></div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="enumerable/02_sum/2">
+<pre class="sh_ruby"><code>[1, 2, 3].sum 
+# =&gt; 6
+
+
+(1..100).sum  
+# =&gt; 5050
+
+
+(1..5).sum {|n| n * 2 } 
+# =&gt; 30</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental small" ref="enumerable/03_each_object/1">
+<h1>Enumerable#each_with_object</h1>
+
+<ul>
+<li>similar to #inject</li>
+<li>with a twist.</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="enumerable/03_each_object/2">
+<pre class="sh_ruby"><code>[1, 2].inject({}) do |h, i| 
+    h[i] = i + 1
+    h # &lt;&lt; easy to forget
+end 
+# =&gt; {1 =&gt; 1, 2 =&gt; 4}
+
+
+# note the inverted params
+[1, 2].each_with_object({}) do |i, h| 
+    h[i] = i + 1
+end 
+# =&gt; {1 =&gt; 1, 2 =&gt; 4}</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental small" ref="enumerable/04_index_by/1">
+<h1>Enumerable#index_by</h1>
+
+<ul>
+<li>Similar to Enumerable#group_by</li>
+<li>Each key has 1 value</li>
+<li>If keys aren't unique, last value is used</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="enumerable/04_index_by/2">
+<pre class="sh_ruby"><code>orders.index_by(&amp;:number)
+# =&gt; {'2009-032' =&gt; #&lt;Order&gt;, 
+#     '2009-008' =&gt; #&lt;Order&gt;}
+
+
+
+# duplicate keys are not grouped!
+(1..5).index_by{ |n| n &amp; 1 }
+# =&gt; {1=&gt;5, 0=&gt;4}
+
+
+
+(1..5).group_by{ |n| n &amp; 1 }
+# =&gt; {1=&gt;[1, 3, 5], 0=&gt;[2, 4]}</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental small" ref="enumerable/05_many/1">
+<h1>Enumerable#many?</h1>
+
+<ul>
+<li>shorthand for size &gt; 1</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="enumerable/05_many/2">
+<pre class="sh_ruby"><code>&lt;% if pages.many? %&gt;
+  &lt;%= pagination_links %&gt;
+&lt;% end %&gt;
+
+
+@see_more = videos.many? do |video| 
+  video.category == params[:category]
+end
+
+
+# be aware that:
+#   any? matches &gt; 0,
+#   many? matches &gt; 1
+
+[1].any?    # =&gt; true
+[1].many?   # =&gt; false
+[1,2].many? # =&gt; true</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="array/01_conversions/1">
+<h1>Array Extensions</h1>
+
+<h2>require 'active_support/core_ext/array'</h2></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="array/01_conversions/2">
+<h1>Array#to_sentence</h1></div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="array/01_conversions/3">
+<pre class="sh_ruby"><code>['Earth'].to_sentence&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 
+# =&gt; "Earth"
+
+
+['Earth', 'Wind'].to_sentence&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 
+# =&gt; "Earth and Wind"
+
+
+['Earth', 'Wind', 'Fire'].to_sentence 
+# =&gt; "Earth, Wind, and Fire"
+
+
+users.map(&amp;:name).to_sentence
+# "Bob, Dave, Chuck and Bill"</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="array/03_wrapping/1">
+<h1>Array#wrap</h1>
+
+<ul>
+<li>wraps objects in an array</li>
+<li>calls the #to_ary method if available</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="array/03_wrapping/2">
+<pre class="sh_ruby"><code>@servers = 'db.example.com'
+
+def reboot
+  Array.wrap(@servers).each do |server|
+    puts "rebooting: #{server}"
+  end
+end
+
+reboot
+# =&gt; rebooting: db.example.com
+
+
+
+# Gotchas!    
+Array.wrap(:a =&gt; :b) # =&gt; [{:a =&gt; :b}]
+Array(:a =&gt; :b)      # =&gt; [[:a, :b]]</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="array/04_grouping/1">
+<h1>Array#in_groups_of</h1>
+
+<h1>Array#in_groups</h1></div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="array/04_grouping/2">
+<pre class="sh_ruby"><code>[1, 2, 3].in_groups_of(2) 
+# =&gt; [[1, 2], [3, nil]]
+
+
+
+[1, 2, 3].in_groups_of(2, 0) 
+# =&gt; [[1, 2], [3, 0]]
+
+
+
+[1, 2, 3].in_groups_of(2, false) 
+# =&gt; [[1, 2], [3]]</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="array/04_grouping/3">
+<pre class="sh_ruby"><code>%w{1 2 3 4}.in_groups(2)
+# =&gt; [["1", "2"], ["3", "4"]]
+
+
+
+%w{1 2 3 4 5}.in_groups(2, 0)
+# =&gt; [["1", "2", "3"], ["4", "5", 0]]    
+
+
+
+%w{1 2 3 4 5}.in_groups(2, false)
+# =&gt; [["1", "2", "3"], ["4", "5"]]</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="hash/01_merging/1">
+<h1>Hash Extensions</h1>
+
+<h2>require 'active_support/core_ext/hash'</h2></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="hash/01_merging/2">
+<h1>Hash#reverse_merge</h1>
+
+<ul>
+<li>Useful when merging in defaults</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="hash/01_merging/3">
+<pre class="sh_ruby"><code>class Cache
+  Defaults = {ttl: 1.hour}
+
+  def store(options = {})
+    options.reverse_merge! Defaults
+    puts options[:ttl]
+  end
+end
+
+Cache.new.store
+# =&gt; 3600 (1.hour)
+
+Cache.new.store(ttl: 1.minute)
+# =&gt; 60 (1.minute)</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="hash/02_keys/1">
+<h1>Hash#except</h1></div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="hash/02_keys/2">
+<pre class="sh_ruby"><code># serialize all attributes except password
+class User
+  def to_json
+    attributes.except(:password).to_json
+  end
+end
+
+
+{:a =&gt; 1, :b =&gt; 2}.except(:a) 
+# =&gt; {:b =&gt; 2}</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="hash/02_keys/3">
+<h1>Hash#with_indifferent_access</h1></div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="hash/02_keys/4">
+<pre class="sh_ruby"><code>{:a =&gt; 1}.with_indifferent_access["a"] 
+# =&gt; 1
+
+
+{:a =&gt; :a}.stringify_keys
+# =&gt; {"a" =&gt; :a}
+
+
+{"a" =&gt; "a"}.symbolize_keys
+# =&gt; {:a =&gt; "a"}</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="hash/02_keys/5">
+<pre class="sh_ruby"><code>yml = YAML.load &lt;&lt;-EOY
+---
+cache: true
+email: you@example.com
+EOY
+
+# enable indifferent access
+yml = yml.with_indifferent_access
+
+
+yml['cache']
+# =&gt; true
+
+
+yml[:cache]
+# =&gt; true</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="hash/03_slicing/1">
+<h2>Hash#slice</h2></div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="hash/03_slicing/2">
+<pre class="sh_ruby"><code>{:a =&gt; 1, :b =&gt; 2, :c =&gt; 3}.slice(:a, :c)
+# =&gt; {:a =&gt; 1, :c =&gt; 3}</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="date_time/01_calculations/1">
+<h1>Date Extensions</h1>
+
+<h2>require 'active_support/core_ext/date'</h2></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="date_time/01_calculations/2">
+<h1>Named Dates</h1>
+
+<ul>
+<li>next_year</li>
+<li>next_week</li>
+<li>next_month</li>
+<li>beginning_of_week</li>
+<li>beginning_of_year</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="date_time/01_calculations/3">
+<pre class="sh_ruby"><code>d = Date.new(2010, 5, 8) 
+# =&gt; Sat, 08 May 2010
+
+
+d.next_month&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 
+# =&gt; Tue, 08 Jun 2010
+
+
+d.next_year              
+# =&gt; Sun, 08 May 2011    </code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="date_time/02_advance/1">
+<h1>Date#advance</h1></div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="date_time/02_advance/2">
+<pre class="sh_ruby"><code>date = Date.new(2010, 6, 6)
+
+
+date.advance(:years =&gt; 1, :weeks =&gt; 2)&#xA0; 
+# =&gt; Mon, 20 Jun 2011</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="date_time/03_change/1">
+<h1>Date#change</h1>
+
+<ul>
+<li>:year, :month, :day</li>
+</ul>
+
+
+<h1>DateTime#change</h1>
+
+<ul>
+<li>:hour, :min, :sec</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="date_time/03_change/2">
+<pre class="sh_ruby"><code>d = Date.new(2010, 12, 23)
+
+
+d.change(:year =&gt; 2011, :month =&gt; 11)
+# =&gt; Wed, 23 Nov 2011</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="date_time/03_change/3">
+<pre class="sh_ruby"><code>now = DateTime.current
+# =&gt; Tue, 08 Jun 2010 01:56:22 +0000
+
+
+now.change(:hour =&gt; 0)
+# =&gt; Tue, 08 Jun 2010 00:00:00 +0000</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="date_time/04_durations/1">
+<h1>Durations</h1></div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="date_time/04_durations/2">
+<pre class="sh_ruby"><code>d = Date.current
+# =&gt; Mon, 09 Aug 2010
+
+
+d + 1.year
+# =&gt; Tue, 09 Aug 2011
+
+
+d - 3.hours
+# =&gt; Sun, 08 Aug 2010 21:00:00 UTC +00:00</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="date_time/04_durations/3">
+<pre class="sh_ruby"><code>now = DateTime.current
+# =&gt; Mon, 09 Aug 2010 23:15:17 +0000
+
+
+now + 1.year
+# =&gt; Tue, 09 Aug 2011 23:15:17 +0000
+
+
+now - 1.week
+# =&gt; Mon, 02 Aug 2010 23:15:17 +0000</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="date_time/05_step/1">
+<h1>Date#step</h1></div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="date_time/05_step/2">
+<pre class="sh_ruby"><code>today = Date.today
+next_week = today + 1.week
+
+today.step(next_week, 1.day) do |day|
+  puts day.to_s :long
+end
+
+# =&gt; August 10, 2011
+# =&gt; August 11, 2011
+# =&gt; August 12, 2011
+# =&gt; August 13, 2011
+# =&gt; August 14, 2011
+# =&gt; August 15, 2011
+# =&gt; August 16, 2011
+# =&gt; August 17, 2011</code></pre></div>
+</div></div>
+
+</body>
+</html>
